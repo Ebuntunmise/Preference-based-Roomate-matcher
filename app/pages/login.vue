@@ -31,6 +31,10 @@
 
         <p v-if="errorMsg" class="error">{{ errorMsg }}</p>
 
+        <div class="forgot">
+          <NuxtLink to="/forgot-password">Forgot password?</NuxtLink>
+        </div>
+
         <button type="submit" :disabled="loading">
           {{ loading ? 'Logging in…' : 'Log In' }}
         </button>
@@ -189,5 +193,16 @@ button:disabled {
   color: #3b82f6;
   text-decoration: none;
   font-weight: 600;
+}
+
+.forgot {
+  text-align: right;
+  margin-bottom: 0.25rem;
+}
+
+.forgot a {
+  font-size: 0.825rem;
+  color: #3b82f6;
+  text-decoration: none;
 }
 </style>
